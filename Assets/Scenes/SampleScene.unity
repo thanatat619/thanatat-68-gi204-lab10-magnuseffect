@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 171755755}
   - component: {fileID: 171755754}
   - component: {fileID: 171755753}
+  - component: {fileID: 171755758}
   m_Layer: 0
   m_Name: Cube_AngularVelocity
   m_TagString: Untagged
@@ -149,7 +150,7 @@ Rigidbody:
   serializedVersion: 5
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -212,7 +213,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3abacff6270958849a9d466c42e26974, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -253,12 +254,25 @@ Transform:
   m_GameObject: {fileID: 171755752}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.35, z: 0.5}
+  m_LocalPosition: {x: -2.81, y: 0.35, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &171755758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171755752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb0d65a85c034d48b862715d711ed18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AngularVelocityY
+  rotationSpeed: 5
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,7 +679,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 05fe74435a6942a43bf8d84171f12290, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -706,7 +720,7 @@ Transform:
   m_GameObject: {fileID: 1955906959}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.74, y: 0.35, z: 0.5}
+  m_LocalPosition: {x: 1.02, y: 0.35, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

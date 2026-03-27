@@ -1,31 +1,32 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class AngularVelocity : MonoBehaviour
 {
-    public float rotationSpeed = 5f; // rad/s
+    public float rotationSpeed = 5f; // ความเร็วการหมุน (rad/s)
 
     private Rigidbody rb;
-    private bool isStopped = false;
 
     void Start()
     {
+        // ดึง Rigidbody ของวัตถุ
         rb = GetComponent<Rigidbody>();
+
+        // เริ่มต้นไม่หมุน
+        rb.angularVelocity = Vector3.zero;
     }
 
     void FixedUpdate()
     {
-        if (!isStopped)
+        // ถ้ากดปุ่ม A → หมุนรอบแกน Y
+        if (Keyboard.current.aKey.isPressed)
         {
-            // หมุนตลอดเวลา
             rb.angularVelocity = new Vector3(0f, rotationSpeed, 0f);
         }
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
+        else
         {
-            isStopped = !isStopped;
+            // ถ้าไม่มีปุ่มถูกกด → หยุดทันที
+            rb.angularVelocity = Vector3.zero;
         }
     }
 }
